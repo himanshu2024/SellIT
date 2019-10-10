@@ -13,6 +13,10 @@
 		865FB5BD234DAC2300670BEE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 865FB5BB234DAC2300670BEE /* Main.storyboard */; };
 		865FB5BF234DAC2500670BEE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 865FB5BE234DAC2500670BEE /* Assets.xcassets */; };
 		865FB5C2234DAC2500670BEE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 865FB5C0234DAC2500670BEE /* LaunchScreen.storyboard */; };
+		86F9761C234F6404008E0BE3 /* CategoriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F9761A234F6404008E0BE3 /* CategoriesTableViewCell.swift */; };
+		86F9761D234F6404008E0BE3 /* CategoriesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86F9761B234F6404008E0BE3 /* CategoriesTableViewCell.xib */; };
+		86F97620234F64A1008E0BE3 /* CategoryItemCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F9761E234F64A1008E0BE3 /* CategoryItemCellCollectionViewCell.swift */; };
+		86F97621234F64A1008E0BE3 /* CategoryItemCellCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86F9761F234F64A1008E0BE3 /* CategoryItemCellCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		865FB5BE234DAC2500670BEE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		865FB5C1234DAC2500670BEE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		865FB5C3234DAC2500670BEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		86F9761A234F6404008E0BE3 /* CategoriesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesTableViewCell.swift; sourceTree = "<group>"; };
+		86F9761B234F6404008E0BE3 /* CategoriesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoriesTableViewCell.xib; sourceTree = "<group>"; };
+		86F9761E234F64A1008E0BE3 /* CategoryItemCellCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryItemCellCollectionViewCell.swift; sourceTree = "<group>"; };
+		86F9761F234F64A1008E0BE3 /* CategoryItemCellCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryItemCellCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +71,10 @@
 				865FB5BE234DAC2500670BEE /* Assets.xcassets */,
 				865FB5C0234DAC2500670BEE /* LaunchScreen.storyboard */,
 				865FB5C3234DAC2500670BEE /* Info.plist */,
+				86F9761A234F6404008E0BE3 /* CategoriesTableViewCell.swift */,
+				86F9761B234F6404008E0BE3 /* CategoriesTableViewCell.xib */,
+				86F9761E234F64A1008E0BE3 /* CategoryItemCellCollectionViewCell.swift */,
+				86F9761F234F64A1008E0BE3 /* CategoryItemCellCollectionViewCell.xib */,
 			);
 			path = SellIT;
 			sourceTree = "<group>";
@@ -126,7 +138,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				865FB5C2234DAC2500670BEE /* LaunchScreen.storyboard in Resources */,
+				86F9761D234F6404008E0BE3 /* CategoriesTableViewCell.xib in Resources */,
 				865FB5BF234DAC2500670BEE /* Assets.xcassets in Resources */,
+				86F97621234F64A1008E0BE3 /* CategoryItemCellCollectionViewCell.xib in Resources */,
 				865FB5BD234DAC2300670BEE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,8 +153,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				865FB5BA234DAC2300670BEE /* ViewController.swift in Sources */,
+				86F9761C234F6404008E0BE3 /* CategoriesTableViewCell.swift in Sources */,
 				865FB5B6234DAC2300670BEE /* AppDelegate.swift in Sources */,
 				865FB5B8234DAC2300670BEE /* SceneDelegate.swift in Sources */,
+				86F97620234F64A1008E0BE3 /* CategoryItemCellCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
