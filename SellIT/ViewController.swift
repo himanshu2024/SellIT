@@ -21,6 +21,7 @@ class ViewController: UIViewController {
         
        tableView.register(UINib(nibName: "CategoriesTableViewCell", bundle: nil), forCellReuseIdentifier: "CategoriesTableViewCell")
         
+        
     }
 }
 
@@ -41,7 +42,7 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 180;
+        return 194;
     }
 }
 
