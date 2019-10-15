@@ -32,17 +32,30 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 2
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "CategoriesTableViewCell", for: indexPath) as! CategoriesTableViewCell
+        
+        cell.cellType = HomeCellType(rawValue: indexPath.row)
+        if indexPath.row == 0{
+            cell.label.isHidden = true
+        }
+        else{
+            cell.label.text = "Home"
+        }
+        
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 194;
+        
+        if indexPath.row == 0{
+            return 194
+        }
+        return 230;
     }
 }
 
