@@ -19,6 +19,13 @@
 		86999B3A2355FC5E00E2797C /* Assured.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86999B392355FC5E00E2797C /* Assured.swift */; };
 		86CFBED72355EB11002F3B7C /* AssuredCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CFBED52355EB11002F3B7C /* AssuredCollectionViewCell.swift */; };
 		86CFBED82355EB11002F3B7C /* AssuredCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86CFBED62355EB11002F3B7C /* AssuredCollectionViewCell.xib */; };
+		86D037132359D619009F39EE /* AdsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D037112359D619009F39EE /* AdsTableViewCell.swift */; };
+		86D037142359D619009F39EE /* AdsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86D037122359D619009F39EE /* AdsTableViewCell.xib */; };
+		86D037182359E2B3009F39EE /* AdsTabCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D037162359E2B3009F39EE /* AdsTabCollectionViewCell.swift */; };
+		86D037192359E2B3009F39EE /* AdsTabCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86D037172359E2B3009F39EE /* AdsTabCollectionViewCell.xib */; };
+		86D0371D2359F8B9009F39EE /* AdsTabPageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D0371B2359F8B9009F39EE /* AdsTabPageCollectionViewCell.swift */; };
+		86D0371E2359F8B9009F39EE /* AdsTabPageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86D0371C2359F8B9009F39EE /* AdsTabPageCollectionViewCell.xib */; };
+		86D037202359FA52009F39EE /* AdsTabsType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D0371F2359FA52009F39EE /* AdsTabsType.swift */; };
 		86F9761C234F6404008E0BE3 /* CategoriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F9761A234F6404008E0BE3 /* CategoriesTableViewCell.swift */; };
 		86F9761D234F6404008E0BE3 /* CategoriesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86F9761B234F6404008E0BE3 /* CategoriesTableViewCell.xib */; };
 		86F97620234F64A1008E0BE3 /* CategoryItemCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F9761E234F64A1008E0BE3 /* CategoryItemCellCollectionViewCell.swift */; };
@@ -40,6 +47,13 @@
 		86999B392355FC5E00E2797C /* Assured.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assured.swift; sourceTree = "<group>"; };
 		86CFBED52355EB11002F3B7C /* AssuredCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssuredCollectionViewCell.swift; sourceTree = "<group>"; };
 		86CFBED62355EB11002F3B7C /* AssuredCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AssuredCollectionViewCell.xib; sourceTree = "<group>"; };
+		86D037112359D619009F39EE /* AdsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsTableViewCell.swift; sourceTree = "<group>"; };
+		86D037122359D619009F39EE /* AdsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdsTableViewCell.xib; sourceTree = "<group>"; };
+		86D037162359E2B3009F39EE /* AdsTabCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsTabCollectionViewCell.swift; sourceTree = "<group>"; };
+		86D037172359E2B3009F39EE /* AdsTabCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdsTabCollectionViewCell.xib; sourceTree = "<group>"; };
+		86D0371B2359F8B9009F39EE /* AdsTabPageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsTabPageCollectionViewCell.swift; sourceTree = "<group>"; };
+		86D0371C2359F8B9009F39EE /* AdsTabPageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdsTabPageCollectionViewCell.xib; sourceTree = "<group>"; };
+		86D0371F2359FA52009F39EE /* AdsTabsType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsTabsType.swift; sourceTree = "<group>"; };
 		86F9761A234F6404008E0BE3 /* CategoriesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesTableViewCell.swift; sourceTree = "<group>"; };
 		86F9761B234F6404008E0BE3 /* CategoriesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoriesTableViewCell.xib; sourceTree = "<group>"; };
 		86F9761E234F64A1008E0BE3 /* CategoryItemCellCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryItemCellCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -64,6 +78,7 @@
 				861D3DBC2354A8C400EA0075 /* Data.swift */,
 				86999B372355F1D200E2797C /* HomeCellType.swift */,
 				86999B392355FC5E00E2797C /* Assured.swift */,
+				86D0371F2359FA52009F39EE /* AdsTabsType.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -111,10 +126,14 @@
 		86CFBED22355EA42002F3B7C /* CustomCells */ = {
 			isa = PBXGroup;
 			children = (
+				86D0371A2359F87C009F39EE /* AdsTabPageCell */,
+				86D037152359E218009F39EE /* AdsTabCell */,
 				86CFBED42355EAC4002F3B7C /* SellItAssuredCell */,
 				86CFBED32355EAAE002F3B7C /* CategoryCell */,
 				86F9761A234F6404008E0BE3 /* CategoriesTableViewCell.swift */,
 				86F9761B234F6404008E0BE3 /* CategoriesTableViewCell.xib */,
+				86D037112359D619009F39EE /* AdsTableViewCell.swift */,
+				86D037122359D619009F39EE /* AdsTableViewCell.xib */,
 			);
 			path = CustomCells;
 			sourceTree = "<group>";
@@ -135,6 +154,24 @@
 				86CFBED62355EB11002F3B7C /* AssuredCollectionViewCell.xib */,
 			);
 			path = SellItAssuredCell;
+			sourceTree = "<group>";
+		};
+		86D037152359E218009F39EE /* AdsTabCell */ = {
+			isa = PBXGroup;
+			children = (
+				86D037162359E2B3009F39EE /* AdsTabCollectionViewCell.swift */,
+				86D037172359E2B3009F39EE /* AdsTabCollectionViewCell.xib */,
+			);
+			path = AdsTabCell;
+			sourceTree = "<group>";
+		};
+		86D0371A2359F87C009F39EE /* AdsTabPageCell */ = {
+			isa = PBXGroup;
+			children = (
+				86D0371B2359F8B9009F39EE /* AdsTabPageCollectionViewCell.swift */,
+				86D0371C2359F8B9009F39EE /* AdsTabPageCollectionViewCell.xib */,
+			);
+			path = AdsTabPageCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,6 +235,9 @@
 				865FB5C2234DAC2500670BEE /* LaunchScreen.storyboard in Resources */,
 				86F9761D234F6404008E0BE3 /* CategoriesTableViewCell.xib in Resources */,
 				865FB5BF234DAC2500670BEE /* Assets.xcassets in Resources */,
+				86D0371E2359F8B9009F39EE /* AdsTabPageCollectionViewCell.xib in Resources */,
+				86D037192359E2B3009F39EE /* AdsTabCollectionViewCell.xib in Resources */,
+				86D037142359D619009F39EE /* AdsTableViewCell.xib in Resources */,
 				86F97621234F64A1008E0BE3 /* CategoryItemCellCollectionViewCell.xib in Resources */,
 				86CFBED82355EB11002F3B7C /* AssuredCollectionViewCell.xib in Resources */,
 				865FB5BD234DAC2300670BEE /* Main.storyboard in Resources */,
@@ -211,12 +251,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86D037202359FA52009F39EE /* AdsTabsType.swift in Sources */,
 				86999B382355F1D200E2797C /* HomeCellType.swift in Sources */,
 				86999B3A2355FC5E00E2797C /* Assured.swift in Sources */,
 				86CFBED72355EB11002F3B7C /* AssuredCollectionViewCell.swift in Sources */,
+				86D037182359E2B3009F39EE /* AdsTabCollectionViewCell.swift in Sources */,
+				86D037132359D619009F39EE /* AdsTableViewCell.swift in Sources */,
 				861D3DBD2354A8C400EA0075 /* Data.swift in Sources */,
 				865FB5BA234DAC2300670BEE /* ViewController.swift in Sources */,
 				86F9761C234F6404008E0BE3 /* CategoriesTableViewCell.swift in Sources */,
+				86D0371D2359F8B9009F39EE /* AdsTabPageCollectionViewCell.swift in Sources */,
 				865FB5B6234DAC2300670BEE /* AppDelegate.swift in Sources */,
 				865FB5B8234DAC2300670BEE /* SceneDelegate.swift in Sources */,
 				86F97620234F64A1008E0BE3 /* CategoryItemCellCollectionViewCell.swift in Sources */,
@@ -365,6 +409,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3Q4R6U76B4;
 				INFOPLIST_FILE = SellIT/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -382,6 +427,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3Q4R6U76B4;
 				INFOPLIST_FILE = SellIT/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

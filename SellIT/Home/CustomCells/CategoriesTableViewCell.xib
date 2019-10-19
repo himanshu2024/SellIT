@@ -16,51 +16,68 @@
                 <rect key="frame" x="0.0" y="0.0" width="462" height="143"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BOk-QA-soe">
-                        <rect key="frame" x="0.0" y="0.0" width="462" height="143"/>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="O35-g3-Go5">
+                        <rect key="frame" x="0.0" y="0.0" width="462" height="29.5"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="DBP-Fx-fxA">
-                                <rect key="frame" x="0.0" y="0.0" width="462" height="143"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Pf-Dd-kNT">
-                                        <rect key="frame" x="0.0" y="0.0" width="462" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="N9n-8o-A2X">
-                                        <rect key="frame" x="0.0" y="20.5" width="462" height="122.5"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ReT-gl-7Bt">
-                                            <size key="itemSize" width="50" height="50"/>
-                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        </collectionViewFlowLayout>
-                                    </collectionView>
-                                </subviews>
-                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Pf-Dd-kNT">
+                                <rect key="frame" x="8" y="8" width="46" height="21.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="DBP-Fx-fxA" firstAttribute="leading" secondItem="BOk-QA-soe" secondAttribute="leading" id="45y-Cb-v9K"/>
-                            <constraint firstAttribute="bottom" secondItem="DBP-Fx-fxA" secondAttribute="bottom" id="G8C-ws-3Zn"/>
-                            <constraint firstItem="DBP-Fx-fxA" firstAttribute="top" secondItem="BOk-QA-soe" secondAttribute="top" id="kV8-fW-OvL"/>
-                            <constraint firstAttribute="trailing" secondItem="DBP-Fx-fxA" secondAttribute="trailing" id="ri2-yW-z2H"/>
+                            <constraint firstItem="7Pf-Dd-kNT" firstAttribute="leading" secondItem="O35-g3-Go5" secondAttribute="leading" constant="8" id="E0o-No-Ncd"/>
+                            <constraint firstItem="7Pf-Dd-kNT" firstAttribute="top" secondItem="O35-g3-Go5" secondAttribute="top" constant="8" id="lEs-xM-hl9"/>
+                            <constraint firstAttribute="trailing" secondItem="7Pf-Dd-kNT" secondAttribute="trailing" constant="8" id="ljx-CU-Q1O"/>
                         </constraints>
+                    </stackView>
+                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xLz-YC-EYR">
+                        <rect key="frame" x="1" y="30" width="126" height="113"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hiH-jv-ZsF">
+                                <rect key="frame" x="8" y="84" width="54" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <state key="normal" title="Know More"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Quality Assured Seamless &amp; Convenient Value of money" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cy9-d9-ngS">
+                                <rect key="frame" x="5" y="36" width="118" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Italic" family="Helvetica Neue" pointSize="11"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="N9n-8o-A2X">
+                        <rect key="frame" x="0.0" y="29.5" width="462" height="113.5"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ReT-gl-7Bt">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="BOk-QA-soe" secondAttribute="bottom" id="2yL-Sm-wfs"/>
-                    <constraint firstItem="BOk-QA-soe" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="8l5-AA-wZK"/>
-                    <constraint firstItem="BOk-QA-soe" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="IYQ-KL-GQO"/>
-                    <constraint firstAttribute="trailing" secondItem="BOk-QA-soe" secondAttribute="trailing" id="wc5-HH-qcN"/>
+                    <constraint firstItem="O35-g3-Go5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="FLP-WN-E35"/>
+                    <constraint firstAttribute="trailing" secondItem="N9n-8o-A2X" secondAttribute="trailing" id="Pu3-nR-xRq"/>
+                    <constraint firstAttribute="trailing" secondItem="O35-g3-Go5" secondAttribute="trailing" id="n4W-1A-yBv"/>
+                    <constraint firstAttribute="bottom" secondItem="N9n-8o-A2X" secondAttribute="bottom" id="q7R-Nn-PW6"/>
+                    <constraint firstItem="O35-g3-Go5" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="wgN-lZ-XvO"/>
+                    <constraint firstItem="N9n-8o-A2X" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="xX2-zZ-CZn"/>
+                    <constraint firstItem="N9n-8o-A2X" firstAttribute="top" secondItem="O35-g3-Go5" secondAttribute="bottom" id="zOx-Sw-5pL"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="backView" destination="xLz-YC-EYR" id="nmi-mS-C5Q"/>
                 <outlet property="collectionView" destination="N9n-8o-A2X" id="Gsl-2j-TL0"/>
                 <outlet property="label" destination="7Pf-Dd-kNT" id="OLn-yJ-X8K"/>
-                <outlet property="stackView" destination="DBP-Fx-fxA" id="6e5-mV-EpK"/>
             </connections>
             <point key="canvasLocation" x="240.57971014492756" y="97.433035714285708"/>
         </tableViewCell>

@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import UIKit
 
 enum HomeCellType : Int{
     case CategoryItemCellCollectionViewCell = 0

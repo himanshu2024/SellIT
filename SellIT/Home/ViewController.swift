@@ -21,6 +21,8 @@ class ViewController: UIViewController {
         
        tableView.register(UINib(nibName: "CategoriesTableViewCell", bundle: nil), forCellReuseIdentifier: "CategoriesTableViewCell")
         
+        tableView.register(UINib(nibName: "AdsTableViewCell", bundle: nil), forCellReuseIdentifier: "AdsTableViewCell")
+        
         
     }
 }
@@ -32,28 +34,35 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return 3
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CategoriesTableViewCell", for: indexPath) as! CategoriesTableViewCell
-        
-        cell.cellType = HomeCellType(rawValue: indexPath.row)
-        if indexPath.row == 0{
-            cell.label.isHidden = true
+        if indexPath.row == 2{
+            let cell = tableView.dequeueReusableCell(withIdentifier: "AdsTableViewCell", for: indexPath) as! AdsTableViewCell
+            return cell
         }
         else{
-            cell.label.text = "Home"
+            let cell = tableView.dequeueReusableCell(withIdentifier: "CategoriesTableViewCell", for: indexPath) as! CategoriesTableViewCell
+            
+            cell.cellType = HomeCellType(rawValue: indexPath.row)
+            if indexPath.row == 0{
+                cell.label.isHidden = true
+            }
+            else{
+                cell.label.text = "Home"
+            }
+            
+            return cell
         }
         
-        return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
         if indexPath.row == 0{
-            return 194
+            return 200
         }
         return 230;
     }

@@ -11,8 +11,8 @@ import UIKit
 class CategoriesTableViewCell: UITableViewCell
 {
     @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var backView: UIView!
     
-    @IBOutlet weak var stackView: UIStackView!
     @IBOutlet weak var collectionView: UICollectionView!
     
     
@@ -22,8 +22,10 @@ class CategoriesTableViewCell: UITableViewCell
                 collectionView.register(UINib(nibName: type.stringValue(), bundle: nil), forCellWithReuseIdentifier: type.stringValue())
                 
                 if HomeCellType(rawValue: 1) == type{
-                    collectionView.backgroundColor = UIColor.cyan
-                    label.backgroundColor = UIColor.cyan
+                    self.backgroundColor = UIColor.cyan
+                    //parentView.backgroundColor = UIColor.cyan
+                    collectionView.backgroundColor = UIColor.clear
+//                    label.backgroundColor = UIColor.cyan
                 }
                 
             }
@@ -35,6 +37,8 @@ class CategoriesTableViewCell: UITableViewCell
         collectionView.delegate = self
         collectionView.dataSource = self
         
+        
+        backView.frame = CGRect(x: 10, y: (230 - backView.frame.height)/2, width: backView.frame.width, height: backView.frame.height)
         
     }
     
@@ -141,10 +145,45 @@ extension CategoriesTableViewCell : UICollectionViewDelegate, UICollectionViewDa
             
         case HomeCellType.AssuredCollectionViewCell:
             
-            return UIEdgeInsets(top: 10, left: 120, bottom: 10, right: 16)
+            return UIEdgeInsets(top: 10, left: 175, bottom: 10, right: 16)
             
         }
+    }
+    
+    //return all displaying item index
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         
+        backViewDisplay(count : indexPath.row)
         
     }
+    
+    //return which items goes off screen
+    func collectionView(_ collectionView: UICollectionView, didEndDisplaying cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        
+    }
+    
+    func backViewDisplay(count : Int)  {
+        switch count {
+        case 0...3:
+            backView.layer.opacity = 1
+            case 4:
+            backView.layer.opacity = 0.7
+            case 5:
+            backView.layer.opacity = 0.5
+            case 6:
+            backView.layer.opacity = 0.3
+//            case 7:
+//            backView.layer.opacity = 0.2
+//            case 8:
+//            backView.layer.opacity = 0.6
+//            case 9:
+//            backView.layer.opacity = 0.3
+        
+        
+        default:
+            backView.layer.opacity = 0
+        }
+        
+    }
+    
 }
