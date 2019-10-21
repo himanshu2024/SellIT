@@ -20,14 +20,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="257" height="40"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XXX-B4-x5i">
-                                <rect key="frame" x="0.0" y="11" width="257" height="18"/>
+                                <rect key="frame" x="110" y="12" width="37.5" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8Lr-FQ-BTX">
+                            <view hidden="YES" contentMode="scaleToFill" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8Lr-FQ-BTX">
                                 <rect key="frame" x="0.0" y="38" width="257" height="2"/>
-                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="2" id="2sp-tY-MLZ"/>
                                 </constraints>
@@ -35,13 +35,11 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="XXX-B4-x5i" firstAttribute="centerY" secondItem="xYr-AH-cWK" secondAttribute="centerY" id="5jr-DJ-EdG"/>
-                            <constraint firstAttribute="trailing" secondItem="XXX-B4-x5i" secondAttribute="trailing" id="6Ko-5f-JVf"/>
+                            <constraint firstItem="8Lr-FQ-BTX" firstAttribute="top" secondItem="XXX-B4-x5i" secondAttribute="bottom" constant="8" id="D54-xq-c0s"/>
                             <constraint firstAttribute="bottom" secondItem="8Lr-FQ-BTX" secondAttribute="bottom" id="MGW-WU-lSM"/>
                             <constraint firstItem="8Lr-FQ-BTX" firstAttribute="leading" secondItem="xYr-AH-cWK" secondAttribute="leading" id="T3w-ov-gOY"/>
-                            <constraint firstItem="XXX-B4-x5i" firstAttribute="leading" secondItem="xYr-AH-cWK" secondAttribute="leading" id="eQq-bY-A2g"/>
                             <constraint firstAttribute="trailing" secondItem="8Lr-FQ-BTX" secondAttribute="trailing" id="rqz-1N-kc4"/>
-                            <constraint firstItem="XXX-B4-x5i" firstAttribute="centerX" secondItem="xYr-AH-cWK" secondAttribute="centerX" id="uSy-GH-NoF"/>
+                            <constraint firstItem="XXX-B4-x5i" firstAttribute="centerX" secondItem="xYr-AH-cWK" secondAttribute="centerX" id="tVF-b6-hhX"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -55,7 +53,8 @@
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="257" height="40"/>
             <connections>
-                <outlet property="adsTabLabel" destination="XXX-B4-x5i" id="hX8-va-iNJ"/>
+                <outlet property="adsTabLabel" destination="XXX-B4-x5i" id="aAo-hv-U4S"/>
+                <outlet property="blueLineView" destination="8Lr-FQ-BTX" id="9yt-nw-nW9"/>
             </connections>
             <point key="canvasLocation" x="102.17391304347827" y="99.776785714285708"/>
         </collectionViewCell>

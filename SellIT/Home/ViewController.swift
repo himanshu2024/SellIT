@@ -62,9 +62,12 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
         if indexPath.row == 0{
-            return 200
+            return 210
         }
-        return 230;
+        if indexPath.row == 2{
+            return 330
+        }
+        return 240;
     }
 }
 

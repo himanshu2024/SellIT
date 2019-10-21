@@ -9,7 +9,8 @@
 import UIKit
 
 class AdsTableViewCell: UITableViewCell {
-
+    
+    @IBOutlet weak var bottomView: UIView!
     @IBOutlet weak var adsTabsCollectionView: UICollectionView!
     @IBOutlet weak var adsTabPageCollectionView: UICollectionView!
     override func awakeFromNib() {
@@ -20,17 +21,23 @@ class AdsTableViewCell: UITableViewCell {
         
         adsTabsCollectionView.register(UINib(nibName: "AdsTabCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "AdsTabCollectionViewCell")
         
+        adsTabsCollectionView.selectItem(at: IndexPath(row: 0, section: 0), animated: false, scrollPosition: [])
+        
+        
         adsTabPageCollectionView.delegate = self
         adsTabPageCollectionView.dataSource = self
         
         adsTabPageCollectionView.register(UINib(nibName: "AdsTabPageCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "AdsTabPageCollectionViewCell")
+        
+        adsTabPageCollectionView.isPagingEnabled = true
+        adsTabPageCollectionView.isScrollEnabled = false
+        
+        bottomView.layer.borderColor = UIColor.gray.cgColor
+        bottomView.layer.borderWidth = 0.7
+        bottomView.layer.cornerRadius = 5
+        
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
+    
     
     
 }
@@ -46,7 +53,7 @@ extension AdsTableViewCell : UICollectionViewDelegate, UICollectionViewDataSourc
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AdsTabCollectionViewCell", for: indexPath) as! AdsTabCollectionViewCell
             if indexPath.row == 0{
                 cell.adsTabLabel.text = "CARS & BIKES"
-
+                
             }
             else{
                 cell.adsTabLabel.text = "JOBS"
@@ -54,6 +61,11 @@ extension AdsTableViewCell : UICollectionViewDelegate, UICollectionViewDataSourc
             return cell
         }else{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AdsTabPageCollectionViewCell", for: indexPath) as! AdsTabPageCollectionViewCell
+            if indexPath.row == 0{
+            }
+            else{
+                
+            }
             return cell
         }
     }
@@ -64,10 +76,10 @@ extension AdsTableViewCell : UICollectionViewDelegate, UICollectionViewDataSourc
                 return CGSize(width: 100, height: collectionView.frame.height)
             }
             else{
-            return CGSize(width: 40, height: collectionView.frame.height)
+                return CGSize(width: 40, height: collectionView.frame.height)
             }
         }else{
-            return CGSize(width: collectionView.frame.height, height: collectionView.frame.height)
+            return CGSize(width: adsTabPageCollectionView.frame.width, height: adsTabPageCollectionView.frame.height)
         }
     }
     
@@ -82,8 +94,27 @@ extension AdsTableViewCell : UICollectionViewDelegate, UICollectionViewDataSourc
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         
+        if(collectionView == self.adsTabPageCollectionView){
+            return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+            
+        }else{
             return UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 0)
             
+        }
+        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if(collectionView == self.adsTabsCollectionView){
+            adsTabPageCollectionView.scrollToItem(at: indexPath, at: [], animated: true)
+        }else{
+            
+        }
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        print(scrollView.contentOffset.x)
+        
     }
     
 }

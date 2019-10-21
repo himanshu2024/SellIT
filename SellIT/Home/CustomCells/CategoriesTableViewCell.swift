@@ -150,10 +150,16 @@ extension CategoriesTableViewCell : UICollectionViewDelegate, UICollectionViewDa
         }
     }
     
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        print(scrollView.contentOffset.x)
+        backViewDisplay(count : scrollView.contentOffset.x)
+        
+    }
+    
     //return all displaying item index
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         
-        backViewDisplay(count : indexPath.row)
+        //backViewDisplay(count : indexPath.row)
         
     }
     
@@ -162,28 +168,11 @@ extension CategoriesTableViewCell : UICollectionViewDelegate, UICollectionViewDa
         
     }
     
-    func backViewDisplay(count : Int)  {
-        switch count {
-        case 0...3:
-            backView.layer.opacity = 1
-            case 4:
-            backView.layer.opacity = 0.7
-            case 5:
-            backView.layer.opacity = 0.5
-            case 6:
-            backView.layer.opacity = 0.3
-//            case 7:
-//            backView.layer.opacity = 0.2
-//            case 8:
-//            backView.layer.opacity = 0.6
-//            case 9:
-//            backView.layer.opacity = 0.3
-        
-        
-        default:
-            backView.layer.opacity = 0
-        }
-        
+    func backViewDisplay(count : CGFloat)  {
+        //count  = 0 visible, 175 = invisible
+        let opacity = Float((175 - count)/175)
+        backView.layer.opacity = opacity
+
     }
     
 }

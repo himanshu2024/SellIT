@@ -17,18 +17,18 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="O35-g3-Go5">
-                        <rect key="frame" x="0.0" y="0.0" width="462" height="29.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="462" height="37.5"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Pf-Dd-kNT">
-                                <rect key="frame" x="8" y="8" width="46" height="21.5"/>
+                                <rect key="frame" x="16" y="16" width="46" height="21.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="7Pf-Dd-kNT" firstAttribute="leading" secondItem="O35-g3-Go5" secondAttribute="leading" constant="8" id="E0o-No-Ncd"/>
-                            <constraint firstItem="7Pf-Dd-kNT" firstAttribute="top" secondItem="O35-g3-Go5" secondAttribute="top" constant="8" id="lEs-xM-hl9"/>
+                            <constraint firstItem="7Pf-Dd-kNT" firstAttribute="leading" secondItem="O35-g3-Go5" secondAttribute="leading" constant="16" id="E0o-No-Ncd"/>
+                            <constraint firstItem="7Pf-Dd-kNT" firstAttribute="top" secondItem="O35-g3-Go5" secondAttribute="top" constant="16" id="lEs-xM-hl9"/>
                             <constraint firstAttribute="trailing" secondItem="7Pf-Dd-kNT" secondAttribute="trailing" constant="8" id="ljx-CU-Q1O"/>
                         </constraints>
                     </stackView>
@@ -53,7 +53,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="N9n-8o-A2X">
-                        <rect key="frame" x="0.0" y="29.5" width="462" height="113.5"/>
+                        <rect key="frame" x="0.0" y="37.5" width="462" height="105.5"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ReT-gl-7Bt">
                             <size key="itemSize" width="50" height="50"/>

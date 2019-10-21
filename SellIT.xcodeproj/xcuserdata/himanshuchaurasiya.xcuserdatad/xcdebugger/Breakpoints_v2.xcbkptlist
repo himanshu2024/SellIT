@@ -23,7 +23,87 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "0C81E103-150E-4408-9BC0-7C1F8200CD28"
+            uuid = "41358809-D6D0-4940-8DF7-67D7F582CF99"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SellIT/Home/CustomCells/CategoriesTableViewCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "169"
+            endingLineNumber = "169"
+            landmarkName = "collectionView(_:didEndDisplaying:forItemAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E9CCE7E8-8C21-4F71-BA56-833A91739A90"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SellIT/Home/CustomCells/CategoriesTableViewCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "168"
+            endingLineNumber = "168"
+            landmarkName = "collectionView(_:didEndDisplaying:forItemAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CB743808-EC45-4652-9A36-11E3645DA4B2"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SellIT/Home/CustomCells/CategoriesTableViewCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "167"
+            endingLineNumber = "167"
+            landmarkName = "collectionView(_:didEndDisplaying:forItemAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BD6B645C-9CDE-4CFB-8956-44BB7B6045A2"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SellIT/Home/CustomCells/AdsTableViewCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "108"
+            endingLineNumber = "108"
+            landmarkName = "collectionView(_:didSelectItemAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "12A69F73-F313-48AB-B4D0-4AC3D25C94A5"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SellIT/Home/CustomCells/CategoriesTableViewCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "173"
+            endingLineNumber = "173"
+            landmarkName = "backViewDisplay(count:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FCC680C5-64F9-4C51-B4E7-C8A652938EF9"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -39,111 +119,17 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "41358809-D6D0-4940-8DF7-67D7F582CF99"
+            uuid = "600B3E30-A140-47F9-88D0-8FA34B5EB1BB"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SellIT/Home/CustomCells/CategoriesTableViewCell.swift"
+            filePath = "SellIT/Home/CustomCells/AdsTabCell/AdsTabCollectionViewCell.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "167"
-            endingLineNumber = "167"
-            landmarkName = "backViewDisplay(count:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "E9CCE7E8-8C21-4F71-BA56-833A91739A90"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SellIT/Home/CustomCells/CategoriesTableViewCell.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "166"
-            endingLineNumber = "166"
-            landmarkName = "backViewDisplay(count:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "E9CCE7E8-8C21-4F71-BA56-833A91739A90 - c654e787dabd5c3e"
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "SellIT.CategoriesTableViewCell.backViewDisplay(count: Swift.Int) -&gt; ()"
-                  moduleName = "SellIT"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/himanshuchaurasiya/Projects/MyGitProject/IosSamples/SellIT/SellIT/Home/CustomCells/CategoriesTableViewCell.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "166"
-                  endingLineNumber = "166"
-                  offsetFromSymbolStart = "96">
-               </Location>
-               <Location
-                  uuid = "E9CCE7E8-8C21-4F71-BA56-833A91739A90 - c654e787dabd5c3e"
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "SellIT.CategoriesTableViewCell.backViewDisplay(count: Swift.Int) -&gt; ()"
-                  moduleName = "SellIT"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/himanshuchaurasiya/Projects/MyGitProject/IosSamples/SellIT/SellIT/Home/CustomCells/CategoriesTableViewCell.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "166"
-                  endingLineNumber = "166"
-                  offsetFromSymbolStart = "558">
-               </Location>
-               <Location
-                  uuid = "E9CCE7E8-8C21-4F71-BA56-833A91739A90 - c654e787dabd5c3e"
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "SellIT.CategoriesTableViewCell.backViewDisplay(count: Swift.Int) -&gt; ()"
-                  moduleName = "SellIT"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/himanshuchaurasiya/Projects/MyGitProject/IosSamples/SellIT/SellIT/Home/CustomCells/CategoriesTableViewCell.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "166"
-                  endingLineNumber = "166"
-                  offsetFromSymbolStart = "866">
-               </Location>
-               <Location
-                  uuid = "E9CCE7E8-8C21-4F71-BA56-833A91739A90 - c654e787dabd5c3e"
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "SellIT.CategoriesTableViewCell.backViewDisplay(count: Swift.Int) -&gt; ()"
-                  moduleName = "SellIT"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/himanshuchaurasiya/Projects/MyGitProject/IosSamples/SellIT/SellIT/Home/CustomCells/CategoriesTableViewCell.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "166"
-                  endingLineNumber = "166"
-                  offsetFromSymbolStart = "1174">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "CB743808-EC45-4652-9A36-11E3645DA4B2"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SellIT/Home/CustomCells/CategoriesTableViewCell.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "165"
-            endingLineNumber = "165"
-            landmarkName = "backViewDisplay(count:)"
-            landmarkType = "7">
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "isSelected"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
