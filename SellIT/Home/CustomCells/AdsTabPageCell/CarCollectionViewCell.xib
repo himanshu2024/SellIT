@@ -71,6 +71,9 @@
             <size key="customSize" width="200" height="183"/>
             <connections>
                 <outlet property="carImage" destination="MQF-R0-zu6" id="DwR-ih-Nke"/>
+                <outlet property="nameLabel" destination="iGQ-Zq-ySp" id="r3Q-1N-jSt"/>
+                <outlet property="placeLabel" destination="eHc-ub-azb" id="f3Y-EJ-2PD"/>
+                <outlet property="priceLabel" destination="E0g-0l-sE5" id="K0P-Dl-38Y"/>
             </connections>
             <point key="canvasLocation" x="-191.30434782608697" y="185.15625"/>
         </collectionViewCell>

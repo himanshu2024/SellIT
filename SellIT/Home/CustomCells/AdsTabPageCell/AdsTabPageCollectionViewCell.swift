@@ -12,8 +12,6 @@ class AdsTabPageCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var pageCollectionView: UICollectionView!
     
-    
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -28,15 +26,14 @@ class AdsTabPageCollectionViewCell: UICollectionViewCell {
 extension AdsTabPageCollectionViewCell : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        5
+        Data.carArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CarCollectionViewCell", for: indexPath) as! CarCollectionViewCell
-        
+        cell.carItem = Data.carArray[indexPath.row]
         return cell
-        
         
     }
     
@@ -48,11 +45,9 @@ extension AdsTabPageCollectionViewCell : UICollectionViewDelegate, UICollectionV
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         8
-        
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         8
-        
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
