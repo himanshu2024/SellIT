@@ -62,9 +62,10 @@ extension AdsTableViewCell : UICollectionViewDelegate, UICollectionViewDataSourc
         }else{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AdsTabPageCollectionViewCell", for: indexPath) as! AdsTabPageCollectionViewCell
             if indexPath.row == 0{
+                cell.cellType = TabPageType.CarCollectionViewCell
             }
             else{
-                
+                cell.cellType = TabPageType.JobCollectionViewCell
             }
             return cell
         }
@@ -112,9 +113,5 @@ extension AdsTableViewCell : UICollectionViewDelegate, UICollectionViewDataSourc
         }
     }
     
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        print(scrollView.contentOffset.x)
-        
-    }
     
 }

@@ -23,6 +23,8 @@ class ViewController: UIViewController {
         
         tableView.register(UINib(nibName: "AdsTableViewCell", bundle: nil), forCellReuseIdentifier: "AdsTableViewCell")
         
+        tableView.register(UINib(nibName: "NewUpdatesTableViewCell", bundle: nil), forCellReuseIdentifier: "NewUpdatesTableViewCell")
+        
         
     }
 }
@@ -34,13 +36,17 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return 4
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if indexPath.row == 2{
             let cell = tableView.dequeueReusableCell(withIdentifier: "AdsTableViewCell", for: indexPath) as! AdsTableViewCell
+            return cell
+        }
+        else if indexPath.row == 3{
+            let cell = tableView.dequeueReusableCell(withIdentifier: "NewUpdatesTableViewCell", for: indexPath) as! NewUpdatesTableViewCell
             return cell
         }
         else{
@@ -67,7 +73,10 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource{
         if indexPath.row == 2{
             return 330
         }
-        return 240;
+        if indexPath.row == 3{
+            return 240
+        }
+        return 240
     }
 }
 

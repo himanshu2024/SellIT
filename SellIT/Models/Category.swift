@@ -7,12 +7,12 @@
 //
 
 import Foundation
-class Category {
-    var name : String
-    var image : String
+struct Category {
+    let name : String
+    let image : String
     
-    init(name : String, image : String) {
-        self.name = name
-        self.image = image
-    }
+//    init(name : String, image : String) {
+//        self.name = name
+//        self.image = image
+//    }
 }

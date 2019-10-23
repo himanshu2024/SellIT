@@ -19,7 +19,7 @@ class AssuredCollectionViewCell: UICollectionViewCell {
         didSet{
             if let name = assuredItem?.name, let image = assuredItem?.image{
                 assuredLabel.text = name
-                assuredImageView.image = UIImage(named: "file_refresh")
+                assuredImageView.image = UIImage(named: image)
             }
             
         }

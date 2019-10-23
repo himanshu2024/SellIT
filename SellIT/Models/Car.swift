@@ -7,14 +7,14 @@
 //
 
 import Foundation
-class Car {
-    var name : String
-    var image : String
-    var price : String
+struct Car {
+    private (set) var name : String
+    let image : String
+    let price : String
     
-    init(name : String, image : String, price : String) {
-        self.name = name
-        self.image = image
-        self.price = price
-    }
+//    init(name : String, image : String, price : String) {
+//        self.name = name
+//        self.image = image
+//        self.price = price
+//    }
 }

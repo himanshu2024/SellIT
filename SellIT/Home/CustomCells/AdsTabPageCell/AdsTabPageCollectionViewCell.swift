@@ -12,13 +12,24 @@ class AdsTabPageCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var pageCollectionView: UICollectionView!
     
+    var cellType : TabPageType?{
+        didSet{
+            if let type = cellType{
+                            pageCollectionView.register(UINib(nibName: type.stringValue(), bundle: nil), forCellWithReuseIdentifier: type.stringValue())
+                            
+                            if TabPageType(rawValue: 1) == type{
+                            }
+                            
+                        }
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
         pageCollectionView.delegate = self
         pageCollectionView.dataSource = self
-        
-        pageCollectionView.register(UINib(nibName: "CarCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "CarCollectionViewCell")
+        pageCollectionView.showsHorizontalScrollIndicator = false
     }
     
 }
@@ -26,21 +37,65 @@ class AdsTabPageCollectionViewCell: UICollectionViewCell {
 extension AdsTabPageCollectionViewCell : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        Data.carArray.count
+        guard let type = cellType else{
+            return 1
+        }
+        
+        switch type {
+        case TabPageType.CarCollectionViewCell:
+            
+            return Data.carArray.count
+            
+        case TabPageType.JobCollectionViewCell:
+            
+            return Data.jobArray.count
+            
+        }
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CarCollectionViewCell", for: indexPath) as! CarCollectionViewCell
-        cell.carItem = Data.carArray[indexPath.row]
-        return cell
+        guard let type = cellType else{
+            return UICollectionViewCell()
+        }
+        
+        switch type {
+        case TabPageType.CarCollectionViewCell:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: type.stringValue(), for: indexPath) as! CarCollectionViewCell
+            
+            cell.carItem = Data.carArray[indexPath.row]
+            
+            return cell
+            
+        case TabPageType.JobCollectionViewCell:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: type.stringValue(), for: indexPath) as! JobCollectionViewCell
+            cell.jobItem = Data.jobArray[indexPath.row]
+            return cell
+            
+        }
+        
         
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        return CGSize(width: 150, height: 150)
         
+        guard let type = cellType else{
+            return CGSize(width: 150, height: 150)
+
+        }
+        
+        switch type {
+        case TabPageType.CarCollectionViewCell:
+            
+            return CGSize(width: 150, height: 150)
+
+        case TabPageType.JobCollectionViewCell:
+            
+            return CGSize(width: 170, height: 150)
+
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {

@@ -22,7 +22,7 @@ class CategoriesTableViewCell: UITableViewCell
                 collectionView.register(UINib(nibName: type.stringValue(), bundle: nil), forCellWithReuseIdentifier: type.stringValue())
                 
                 if HomeCellType(rawValue: 1) == type{
-                    self.backgroundColor = UIColor.cyan
+                    self.backgroundColor = UIColor(red: 230/255, green: 255/255, blue: 243/255, alpha: 1)
                     //parentView.backgroundColor = UIColor.cyan
                     collectionView.backgroundColor = UIColor.clear
 //                    label.backgroundColor = UIColor.cyan
@@ -151,7 +151,7 @@ extension CategoriesTableViewCell : UICollectionViewDelegate, UICollectionViewDa
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        print(scrollView.contentOffset.x)
+        //print(scrollView.contentOffset.x)
         backViewDisplay(count : scrollView.contentOffset.x)
         
     }
