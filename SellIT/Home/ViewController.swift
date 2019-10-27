@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UISearchBarDelegate {
 
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
@@ -18,6 +18,8 @@ class ViewController: UIViewController {
         let searchController = UISearchController(searchResultsController: nil)
         navigationItem.searchController = searchController
         navigationItem.hidesSearchBarWhenScrolling = false
+        searchController.searchBar.delegate = self
+        searchController.searchBar.keyboardAppearance = .dark
         
        tableView.register(UINib(nibName: "CategoriesTableViewCell", bundle: nil), forCellReuseIdentifier: "CategoriesTableViewCell")
         
@@ -26,6 +28,12 @@ class ViewController: UIViewController {
         tableView.register(UINib(nibName: "NewUpdatesTableViewCell", bundle: nil), forCellReuseIdentifier: "NewUpdatesTableViewCell")
         
         
+    }
+    
+    
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        searchBar.endEditing(true)
+        performSegue(withIdentifier: "goToSearch", sender: self)
     }
 }
 

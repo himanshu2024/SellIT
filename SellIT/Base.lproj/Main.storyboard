@@ -53,6 +53,9 @@
                         <rightBarButtonItems>
                             <barButtonItem title="Item" image="heart" catalog="system" id="0sU-VH-cTi">
                                 <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <connections>
+                                    <segue destination="WBy-Ae-pKI" kind="presentation" identifier="goToSearch" modalPresentationStyle="fullScreen" id="GUY-rO-Efd"/>
+                                </connections>
                             </barButtonItem>
                             <barButtonItem title="Item" image="bell" catalog="system" id="h2o-pU-5B8">
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -66,6 +69,67 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2016.8" y="129.98500749625188"/>
+        </scene>
+        <!--Search View Controller-->
+        <scene sceneID="Unl-Fd-FeT">
+            <objects>
+                <viewController id="WBy-Ae-pKI" customClass="SearchViewController" customModule="SellIT" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="br3-B5-g4X">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gJu-RW-T2d">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TRf-zL-9H4">
+                                        <rect key="frame" x="16" y="0.0" width="20" height="56"/>
+                                        <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <state key="normal" image="arrow.left" catalog="system">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="backButtonClicked:" destination="WBy-Ae-pKI" eventType="touchUpInside" id="Aat-eC-6Wv"/>
+                                        </connections>
+                                    </button>
+                                    <searchBar contentMode="redraw" placeholder="Search For cars, mobiles, sofa..." translatesAutoresizingMaskIntoConstraints="NO" id="Ccy-am-etF">
+                                        <rect key="frame" x="36" y="0.0" width="339" height="56"/>
+                                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <scopeButtonTitles>
+                                            <string>Title</string>
+                                            <string>Title</string>
+                                        </scopeButtonTitles>
+                                    </searchBar>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Ccy-am-etF" firstAttribute="top" secondItem="gJu-RW-T2d" secondAttribute="top" id="BHs-JD-RZw"/>
+                                    <constraint firstItem="Ccy-am-etF" firstAttribute="leading" secondItem="TRf-zL-9H4" secondAttribute="trailing" id="BQf-sm-DVL"/>
+                                    <constraint firstItem="TRf-zL-9H4" firstAttribute="leading" secondItem="gJu-RW-T2d" secondAttribute="leading" constant="16" id="G8z-e4-uDc"/>
+                                    <constraint firstAttribute="height" constant="56" id="Qp1-Ts-MqD"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ccy-am-etF" secondAttribute="trailing" id="eKE-Jg-pUp"/>
+                                    <constraint firstItem="TRf-zL-9H4" firstAttribute="top" secondItem="gJu-RW-T2d" secondAttribute="top" id="fd6-qT-E1i"/>
+                                    <constraint firstAttribute="bottom" secondItem="TRf-zL-9H4" secondAttribute="bottom" id="zb9-XK-lCT"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="gJu-RW-T2d" firstAttribute="leading" secondItem="hSv-9e-fX6" secondAttribute="leading" id="4Ze-s3-CU4"/>
+                            <constraint firstItem="hSv-9e-fX6" firstAttribute="trailing" secondItem="gJu-RW-T2d" secondAttribute="trailing" id="Pqa-pk-fN0"/>
+                            <constraint firstItem="gJu-RW-T2d" firstAttribute="top" secondItem="hSv-9e-fX6" secondAttribute="top" id="hbY-O7-bg8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hSv-9e-fX6"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ERh-4v-xCu"/>
+                    <connections>
+                        <outlet property="headerView" destination="gJu-RW-T2d" id="law-eF-yQa"/>
+                        <outlet property="searchBar" destination="Ccy-am-etF" id="XIO-tX-SmG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="okp-b6-9Xs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2790" y="123"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="E7H-jT-gCE">
@@ -169,6 +233,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrow.left" catalog="system" width="64" height="48"/>
         <image name="bell" catalog="system" width="64" height="62"/>
         <image name="heart" catalog="system" width="64" height="58"/>
         <image name="house" catalog="system" width="64" height="54"/>
