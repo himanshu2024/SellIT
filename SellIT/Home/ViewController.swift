@@ -14,12 +14,8 @@ class ViewController: UIViewController, UISearchBarDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        navigationController?.navigationBar.prefersLargeTitles = true
-        let searchController = UISearchController(searchResultsController: nil)
-        navigationItem.searchController = searchController
-        navigationItem.hidesSearchBarWhenScrolling = false
-        searchController.searchBar.delegate = self
-        searchController.searchBar.keyboardAppearance = .dark
+        configureSearchBar()
+        
         
        tableView.register(UINib(nibName: "CategoriesTableViewCell", bundle: nil), forCellReuseIdentifier: "CategoriesTableViewCell")
         
@@ -30,9 +26,21 @@ class ViewController: UIViewController, UISearchBarDelegate {
         
     }
     
+    func configureSearchBar() {
+        navigationController?.navigationBar.prefersLargeTitles = true
+        let searchController = UISearchController(searchResultsController: nil)
+        navigationItem.searchController = searchController
+        navigationItem.hidesSearchBarWhenScrolling = false
+        searchController.searchBar.delegate = self
+        
+        if let textField  = searchController.searchBar.value(forKey: "searchField") as? UITextField{
+            textField.inputView = UIView()
+        }
+    }
+    
+    
     
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
-        searchBar.endEditing(true)
         performSegue(withIdentifier: "goToSearch", sender: self)
     }
 }
