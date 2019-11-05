@@ -10,15 +10,25 @@ import UIKit
 
 class TrendingTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var tableViewCell: UITableView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        tableViewCell.delegate = self
+        tableViewCell.dataSource = self
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+}
 
-        // Configure the view for the selected state
+extension TrendingTableViewCell : UITableViewDelegate, UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        10
     }
-
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TrendingSearchTableViewCell", for: indexPath)
+        return cell
+    }
+    
+    
 }

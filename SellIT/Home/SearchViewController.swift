@@ -55,27 +55,30 @@ class SearchViewController: UIViewController {
 extension SearchViewController : UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        3
+        1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.row == 0{
+        //if indexPath.row == 0{
         let cell = tableView.dequeueReusableCell(withIdentifier: "RecentSearchTableViewCell", for: indexPath) as! RecentSearchTableViewCell
         return cell
-        }
-        else if indexPath.row == 1{
-
-            let cell = tableView.dequeueReusableCell(withIdentifier: "AssuredTableViewCell", for: indexPath) as! AssuredTableViewCell
-            return cell
-        }
-        else{
-            let cell = tableView.dequeueReusableCell(withIdentifier: "TrendingTableViewCell", for: indexPath) as! TrendingTableViewCell
-            return cell
-        }
+//        }
+//        else if indexPath.row == 1{
+//
+//            let cell = tableView.dequeueReusableCell(withIdentifier: "AssuredTableViewCell", for: indexPath) as! AssuredTableViewCell
+//            return cell
+//        }
+//        else{
+//            let cell = tableView.dequeueReusableCell(withIdentifier: "TrendingTableViewCell", for: indexPath) as! TrendingTableViewCell
+//            return cell
+//        }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        200
+        //if indexPath.row == 0 || indexPath.row == 1{
+        return 150
+        //}
+        
     }
     
     
