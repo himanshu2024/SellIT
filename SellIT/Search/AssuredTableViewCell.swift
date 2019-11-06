@@ -14,8 +14,8 @@ class AssuredTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-//        collectionView.delegate = self
-//        collectionView.dataSource = self
+        collectionView.delegate = self
+        collectionView.dataSource = self
 //        collectionView.showsHorizontalScrollIndicator = false
     }
 
@@ -33,7 +33,7 @@ extension AssuredTableViewCell : UICollectionViewDelegate, UICollectionViewDataS
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 20, height: 20)
+        return CGSize(width: 100, height: 100)
         
     }
     

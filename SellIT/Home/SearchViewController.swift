@@ -55,29 +55,40 @@ class SearchViewController: UIViewController {
 extension SearchViewController : UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        1
+        10
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        //if indexPath.row == 0{
+        if indexPath.row == 0{
         let cell = tableView.dequeueReusableCell(withIdentifier: "RecentSearchTableViewCell", for: indexPath) as! RecentSearchTableViewCell
         return cell
-//        }
-//        else if indexPath.row == 1{
-//
-//            let cell = tableView.dequeueReusableCell(withIdentifier: "AssuredTableViewCell", for: indexPath) as! AssuredTableViewCell
-//            return cell
-//        }
-//        else{
-//            let cell = tableView.dequeueReusableCell(withIdentifier: "TrendingTableViewCell", for: indexPath) as! TrendingTableViewCell
-//            return cell
-//        }
+        }
+        else if indexPath.row == 1{
+
+            let cell = tableView.dequeueReusableCell(withIdentifier: "AssuredTableViewCell", for: indexPath) as! AssuredTableViewCell
+            return cell
+        }
+        else if indexPath.row == 2{
+            let cell = tableView.dequeueReusableCell(withIdentifier: "TrendingSearchesID", for: indexPath)
+            return cell
+        }
+        else{
+            let cell = tableView.dequeueReusableCell(withIdentifier: "TrendingSearchesItemID", for: indexPath)
+            cell.textLabel?.text = "traid 1"
+            
+            cell.imageView?.image = UIImage(systemName: "pencil.circle")
+            cell.imageView?.tintColor = .black
+            return cell
+        }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        //if indexPath.row == 0 || indexPath.row == 1{
-        return 150
-        //}
+        if indexPath.row == 0 || indexPath.row == 1{
+            return 150
+        }
+        else{
+            return 54
+        }
         
     }
     
