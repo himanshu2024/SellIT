@@ -15,7 +15,7 @@ class SearchViewController: UIViewController {
     
     @IBOutlet weak var quickTableView: UITableView!
     
-    var recentSearchCellData : (height:Float,labelArray:[UILabel]) = (0,[])
+    var recentSearchCellData : (height:Float,labelArray:[UIButton]) = (0,[])
     
     //MARK:- life cycle methods
     override func viewDidLoad() {

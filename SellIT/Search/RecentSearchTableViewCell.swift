@@ -12,7 +12,7 @@ class RecentSearchTableViewCell: UITableViewCell {
 
     @IBOutlet weak var recentItemView: UIView!
     
-    var searchedItem : [UILabel]?{
+    var searchedItem : [UIButton]?{
         didSet{
             if let array = searchedItem{
                 addLabelToView(labelArray: array)
@@ -24,10 +24,16 @@ class RecentSearchTableViewCell: UITableViewCell {
         super.awakeFromNib()
     }
     
-    func addLabelToView(labelArray : [UILabel]) {
+    func addLabelToView(labelArray : [UIButton]) {
         recentItemView.subviews.forEach({ $0.removeFromSuperview() })
         for item in labelArray {
+            item.addTarget(self, action: #selector(itemButtonClick), for: .touchUpInside)
             recentItemView.addSubview(item)
         }
+    }
+    
+    
+    @objc func itemButtonClick(sender : UIButton) {
+        print(sender.titleLabel!.text!)
     }
 }

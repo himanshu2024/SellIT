@@ -37,6 +37,7 @@
 		86B3686F236F085A00470BA2 /* ParentCategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B3686E236F085A00470BA2 /* ParentCategoryTableViewCell.swift */; };
 		86C125F5235F3D8D0083D5A6 /* JobCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C125F3235F3D8D0083D5A6 /* JobCollectionViewCell.swift */; };
 		86C125F6235F3D8D0083D5A6 /* JobCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86C125F4235F3D8D0083D5A6 /* JobCollectionViewCell.xib */; };
+		86C3EE3123730B23004182FD /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C3EE3023730B23004182FD /* CustomButton.swift */; };
 		86CFBED72355EB11002F3B7C /* AssuredCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CFBED52355EB11002F3B7C /* AssuredCollectionViewCell.swift */; };
 		86CFBED82355EB11002F3B7C /* AssuredCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86CFBED62355EB11002F3B7C /* AssuredCollectionViewCell.xib */; };
 		86D037132359D619009F39EE /* AdsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D037112359D619009F39EE /* AdsTableViewCell.swift */; };
@@ -86,6 +87,7 @@
 		86B3686E236F085A00470BA2 /* ParentCategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentCategoryTableViewCell.swift; sourceTree = "<group>"; };
 		86C125F3235F3D8D0083D5A6 /* JobCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobCollectionViewCell.swift; sourceTree = "<group>"; };
 		86C125F4235F3D8D0083D5A6 /* JobCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JobCollectionViewCell.xib; sourceTree = "<group>"; };
+		86C3EE3023730B23004182FD /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		86CFBED52355EB11002F3B7C /* AssuredCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssuredCollectionViewCell.swift; sourceTree = "<group>"; };
 		86CFBED62355EB11002F3B7C /* AssuredCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AssuredCollectionViewCell.xib; sourceTree = "<group>"; };
 		86D037112359D619009F39EE /* AdsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsTableViewCell.swift; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				86AB308523602D3C00837CD5 /* CustomLabel.swift */,
+				86C3EE3023730B23004182FD /* CustomButton.swift */,
 			);
 			path = CustomUI;
 			sourceTree = "<group>";
@@ -354,6 +357,7 @@
 				86B36868236DD99F00470BA2 /* AssuredSearchCollectionViewCell.swift in Sources */,
 				86D037202359FA52009F39EE /* AdsTabsType.swift in Sources */,
 				867342F0236ADC6D00DB0D12 /* RecentSearchTableViewCell.swift in Sources */,
+				86C3EE3123730B23004182FD /* CustomButton.swift in Sources */,
 				86B3471E235CB9E500B96EEB /* CarCollectionViewCell.swift in Sources */,
 				86AB308623602D3C00837CD5 /* CustomLabel.swift in Sources */,
 				86999B382355F1D200E2797C /* HomeCellType.swift in Sources */,
