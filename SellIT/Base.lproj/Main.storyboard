@@ -264,7 +264,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="168" translatesAutoresizingMaskIntoConstraints="NO" id="fej-uU-1iI">
-                                                    <rect key="frame" x="16" y="0.0" width="343" height="21.5"/>
+                                                    <rect key="frame" x="16" y="8" width="343" height="21.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Sellit Assured" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LPr-BM-5Zh">
                                                             <rect key="frame" x="0.0" y="0.0" width="146" height="21.5"/>
@@ -279,7 +279,7 @@
                                                     </subviews>
                                                 </stackView>
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="SOx-rm-Z3Q">
-                                                    <rect key="frame" x="0.0" y="21.5" width="375" height="120.5"/>
+                                                    <rect key="frame" x="0.0" y="29.5" width="375" height="112.5"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="rr1-oa-1mh">
                                                         <size key="itemSize" width="97" height="91"/>
@@ -289,7 +289,7 @@
                                                     </collectionViewFlowLayout>
                                                     <cells>
                                                         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AssuredSearchCollectionViewCell" id="Ivr-r5-JNT" customClass="AssuredSearchCollectionViewCell" customModule="SellIT" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="15" width="97" height="91"/>
+                                                            <rect key="frame" x="0.0" y="11" width="97" height="91"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="xX3-Mm-64H">
                                                                 <rect key="frame" x="0.0" y="0.0" width="97" height="91"/>
@@ -335,7 +335,7 @@
                                                 </collectionView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="fej-uU-1iI" firstAttribute="top" secondItem="OHO-yK-MbG" secondAttribute="top" id="Eid-uv-nVK"/>
+                                                <constraint firstItem="fej-uU-1iI" firstAttribute="top" secondItem="OHO-yK-MbG" secondAttribute="top" constant="8" id="Eid-uv-nVK"/>
                                                 <constraint firstAttribute="bottom" secondItem="SOx-rm-Z3Q" secondAttribute="bottom" id="GWO-00-uwH"/>
                                                 <constraint firstItem="fej-uU-1iI" firstAttribute="leading" secondItem="OHO-yK-MbG" secondAttribute="leading" constant="16" id="HBP-Px-gRB"/>
                                                 <constraint firstItem="SOx-rm-Z3Q" firstAttribute="leading" secondItem="OHO-yK-MbG" secondAttribute="leading" id="SU2-Yz-Zl6"/>

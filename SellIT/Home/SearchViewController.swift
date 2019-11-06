@@ -15,6 +15,8 @@ class SearchViewController: UIViewController {
     
     @IBOutlet weak var quickTableView: UITableView!
     
+    var recentSearchCellData : (height:Float,labelArray:[UILabel]) = (0,[])
+    
     //MARK:- life cycle methods
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +27,8 @@ class SearchViewController: UIViewController {
         headerView.layer.shadowOffset = CGSize(width: 0, height: 3)
         headerView.layer.shadowRadius = 2
         headerView.layer.shadowOpacity = 0.1
+        
+        recentSearchCellData = RecentSearchBrain().getRecentSearchItemData()
     }
     override func viewDidAppear(_ animated: Bool) {
         searchBar.becomeFirstResponder()
@@ -34,7 +38,7 @@ class SearchViewController: UIViewController {
     func configureSearchBar() {
         searchBar.layer.borderWidth = 1
         searchBar.layer.borderColor = UIColor.white.cgColor
-        
+        searchBar.delegate = self
         if let textField  = searchBar.value(forKey: "searchField") as? UITextField{
             textField.leftViewMode = .never
         }
@@ -51,6 +55,17 @@ class SearchViewController: UIViewController {
     }
 }
 
+extension SearchViewController : UISearchBarDelegate{
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        if let text = searchBar.text{
+            RecentSearchBrain().saveRecentSearch(searchItem: text)
+            recentSearchCellData = RecentSearchBrain().getRecentSearchItemData()
+            quickTableView.reloadData()
+        }
+        searchBar.resignFirstResponder()
+    }
+}
+
 //MARK:- table view datasource methods
 extension SearchViewController : UITableViewDelegate, UITableViewDataSource{
     
@@ -61,6 +76,7 @@ extension SearchViewController : UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0{
         let cell = tableView.dequeueReusableCell(withIdentifier: "RecentSearchTableViewCell", for: indexPath) as! RecentSearchTableViewCell
+            cell.searchedItem = recentSearchCellData.labelArray
         return cell
         }
         else if indexPath.row == 1{
@@ -83,7 +99,11 @@ extension SearchViewController : UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath.row == 0 || indexPath.row == 1{
+        if indexPath.row == 0{
+            
+            return CGFloat(recentSearchCellData.height)
+        }
+        if indexPath.row == 1{
             return 150
         }
         else{
