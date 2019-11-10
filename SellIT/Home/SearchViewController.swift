@@ -41,7 +41,11 @@ class SearchViewController: UIViewController {
         searchBar.delegate = self
         if let textField  = searchBar.value(forKey: "searchField") as? UITextField{
             textField.leftViewMode = .never
+            
         }
+        
+        
+        
     }
     func configureQuickTableView() {
         quickTableView.delegate = self

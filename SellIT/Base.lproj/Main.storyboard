@@ -193,7 +193,7 @@
                                             <action selector="backButtonClicked:" destination="WBy-Ae-pKI" eventType="touchUpInside" id="Aat-eC-6Wv"/>
                                         </connections>
                                     </button>
-                                    <searchBar contentMode="redraw" placeholder="Search For cars, mobiles, sofa..." translatesAutoresizingMaskIntoConstraints="NO" id="Ccy-am-etF">
+                                    <searchBar contentMode="redraw" placeholder="Search For cars, mobiles, sofa..." translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ccy-am-etF">
                                         <rect key="frame" x="35.5" y="0.0" width="339.5" height="56"/>
                                         <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <textInputTraits key="textInputTraits"/>
