@@ -15,6 +15,7 @@ class CategoriesTableViewCell: UITableViewCell
     
     @IBOutlet weak var collectionView: UICollectionView!
     
+    var goToMobile : (() -> ())?
     
     var cellType : HomeCellType?{
         didSet{
@@ -64,6 +65,24 @@ extension CategoriesTableViewCell : UICollectionViewDelegate, UICollectionViewDa
         case HomeCellType.AssuredCollectionViewCell:
             
             return Data.assuredArray.count
+            
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        //
+        guard let type = cellType else{
+            fatalError()
+        }
+        
+        switch type {
+        case HomeCellType.CategoryItemCellCollectionViewCell:
+            
+            goToMobile?()
+            
+        case HomeCellType.AssuredCollectionViewCell:
+            print("kvkjdf")
+            
             
         }
     }

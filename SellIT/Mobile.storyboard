@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RGq-uf-XxF">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Mobile View Controller-->
+        <scene sceneID="oGP-5p-fbU">
+            <objects>
+                <viewController id="RGq-uf-XxF" customClass="MobileViewController" customModule="SellIT" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ita-gz-ng7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BmW-O0-fVm">
+                                <rect key="frame" x="0.0" y="-60" width="375" height="727"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="mobileCell" id="OuV-2I-xQA">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OuV-2I-xQA" id="suk-I7-5Wg">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="47S-0y-wa6" firstAttribute="bottom" secondItem="BmW-O0-fVm" secondAttribute="bottom" id="I2A-Cv-QrT"/>
+                            <constraint firstItem="47S-0y-wa6" firstAttribute="trailing" secondItem="BmW-O0-fVm" secondAttribute="trailing" id="Pct-un-PCg"/>
+                            <constraint firstItem="BmW-O0-fVm" firstAttribute="leading" secondItem="47S-0y-wa6" secondAttribute="leading" id="coX-bT-2uT"/>
+                            <constraint firstItem="BmW-O0-fVm" firstAttribute="top" secondItem="47S-0y-wa6" secondAttribute="top" constant="-60" id="tJp-dd-J2Q"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="47S-0y-wa6"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="BmW-O0-fVm" id="6Ad-g6-wjK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4hI-UD-QQm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="714.39999999999998" y="113.79310344827587"/>
+        </scene>
+    </scenes>
+</document>

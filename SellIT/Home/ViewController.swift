@@ -26,6 +26,10 @@ class ViewController: UIViewController, UISearchBarDelegate {
         
     }
     
+    func goToMobile() {
+        performSegue(withIdentifier: "toMobileDetailVC", sender: self)
+    }
+    
     func configureSearchBar() {
         navigationController?.navigationBar.prefersLargeTitles = true
         let searchController = UISearchController(searchResultsController: nil)
@@ -67,7 +71,7 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource{
         }
         else{
             let cell = tableView.dequeueReusableCell(withIdentifier: "CategoriesTableViewCell", for: indexPath) as! CategoriesTableViewCell
-            
+            cell.goToMobile = goToMobile
             cell.cellType = HomeCellType(rawValue: indexPath.row)
             if indexPath.row == 0{
                 cell.label.isHidden = true
