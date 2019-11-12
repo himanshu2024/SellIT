@@ -14,6 +14,8 @@ struct RecentSearchBrain {
     let currentSearchKey = "currentSearch"
     let preferences = UserDefaults.standard
     let maxRecentSearchCount = 10
+    let totalWidthSpace = Double(UIScreen.main.bounds.width - 32)
+    
     func saveRecentSearch(searchItem : String) {
         var searchArray = getRecentSearch()
         if searchArray.count == maxRecentSearchCount{
@@ -32,12 +34,11 @@ struct RecentSearchBrain {
     }
     
     
-    func getRecentSearchItemData() -> (height : Float, labelArray : [UILabel]) {
-        var yPos = 16
-        var xPos = 0
-        var xPosComparetor = 0
-        let totalWidthSpace = UIScreen.main.bounds.width - 32
-        var labelArray = [UILabel]()
+    func getRecentSearchItemData() -> (height : Float, labelArray : [UIButton]) {
+        var yPos : Double = 16
+        var xPos : Double = 0
+        
+        var labelArray = [UIButton]()
         
         let itemArray = getRecentSearch()
         
@@ -47,30 +48,20 @@ struct RecentSearchBrain {
         
         for itemIndex in 0..<itemArray.count{
             let item = itemArray[itemIndex]
-            let labelItem = UILabel()
-            labelItem.text = item
-            labelItem.font = labelItem.font.withSize(13)
-            let labelCGSize = labelItem.sizeThatFits(CGSize(width: 100, height: 50))
-            labelItem.textAlignment = .center
+            let buttonItem = UIButton()
+            buttonItem.customSearchButton(title: item)
+            let labelCGSize = buttonItem.titleLabel!.sizeThatFits(CGSize())
             
-            labelItem.frame = CGRect( x:xPos, y:yPos, width:Int(labelCGSize.width+16), height: Int(labelCGSize.height+16))
+            buttonItem.frame = CGRect( x:xPos, y:yPos, width:(Double(labelCGSize.width) > totalWidthSpace ? totalWidthSpace : Double(labelCGSize.width+16)), height: Double(labelCGSize.height+16))
             
-            labelItem.layer.borderColor = UIColor.black.cgColor
-            labelItem.layer.borderWidth = 0.5
-            labelItem.layer.cornerRadius = 5
-            //parentView.addSubview(labelItem)
-            labelArray.append(labelItem)
+            labelArray.append(buttonItem)
             
-            xPos += Int(labelItem.frame.width) + 16
-            xPosComparetor = xPos
+            var txt : String? = nil
             if itemIndex < itemArray.count-1{
-                let tmpLabel1 = getLabel(text: itemArray[itemIndex+1])
-                xPosComparetor += Int(tmpLabel1.width)
+                txt = itemArray[itemIndex+1]
             }
-            if xPosComparetor > Int(totalWidthSpace){
-                xPos = 0
-                yPos += Int(labelItem.frame.height) + 16
-            }
+            
+            (xPos, yPos) = getNextPoint(currentXPos: xPos, currentYPos: yPos, currentViewWidth: Double(buttonItem.frame.width), currentViewHeight: Double(buttonItem.frame.height), nextText: txt)
         }
         
         return (Float(yPos + 80), labelArray)
@@ -78,9 +69,27 @@ struct RecentSearchBrain {
     }
     
     func getLabel(text : String) -> CGSize {
-        let newLabel = UILabel()
-        newLabel.text = text
-        return newLabel.sizeThatFits(CGSize(width: 100, height: 50))
+        let newLabel = UIButton()
+        newLabel.setTitle(text, for: .normal)
+        return newLabel.sizeThatFits(CGSize())
+    }
+    
+    func getNextPoint(currentXPos : Double, currentYPos : Double, currentViewWidth : Double, currentViewHeight : Double, nextText : String?) -> (x:Double,y:Double) {
+        var xPos = currentXPos + currentViewWidth + 16
+        var yPos = currentYPos
+        var xPosComparetor = xPos
+        
+        if let text = nextText{
+            let tmpLabel1 = getLabel(text: text)
+            xPosComparetor += Double(tmpLabel1.width)
+        }
+        
+        if xPosComparetor > totalWidthSpace{
+            xPos = 0
+            yPos += currentViewHeight + 16
+        }
+        
+        return (xPos,yPos)
     }
     
 }
